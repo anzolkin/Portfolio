@@ -10,7 +10,7 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page">
-		<header class="site-header">
+		<header class="site-header decor-back">
 			<nav class="wrapper header-nav">
 				<a href="index.html" class="header-logo">
 					<img src="img/logo.svg" width="64" height="64" alt="Логотип яхт-клуба Попутный ветер">
@@ -38,7 +38,14 @@
 				</ul>
 				<button class="toggle-light-dark" type="button" title="Тёмная тема"></button>
 			</nav>
-			<div class="header-contact"></div>
+			<div class="wrapper sub-header">
+				<ul class="contacts__list">
+					<li class="contacts__list_item"><a class="wa" href="#"><img src="img/whatsapp.svg" alt="WhatsApp" width="24" height="24"></a></li>
+					<li class="contacts__list_item"><a class="tg" href="#"><img src="img/telegram.svg" alt="Telegram" width="24" height="24"></a></li>
+					<li class="contacts__list_item"><a class="vb" href="#"><img src="img/viber.svg" alt="Viber" width="24" height="24"></a></li>
+					<li class="contacts__list_item"><a class="ml" href="#"><img src="img/mail.svg" alt="E-mail" width="24" height="24"></a></li>
+				</ul>
+			</div>
 			<button class="nav__toggle" aria-expanded="false" type="button">
 				menu
 			</button>
@@ -53,13 +60,15 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="main-content">
 		<section class="hero">
-			<div  class="wrapper">
+			<div  class="hero__wrapper">
 				<h1>Яхт-клуб Попутный ветер</h1>
-				<img src="img/main-photo-1.jpg" width="1134" height="534" alt="Парусное судно на закате">
+				<p class="hero-text">Яхт-клуб «Попутный ветер» — лучший парусный клуб Нижнего Новгорода. Клуб основан в начале семидесятых годов прошлого века при заводе Петровского. «Попутный ветер» является наследником парусного сообщества города Горького, которое вёдет свою историю с 1897 года от Нижегородского речного яхт-клуба. Сфера деятельности яхт-клуба – развитие массового, спортивного,  туристического, детскоюношеского, и взрослого парусного спорта. Мы знакомим с парусом и дарим дух свободы. Но в тоже время у нас уютно и моторным судам. Клуб предоставляет весь комплекс услуг для судов маломерного флота.</p>
+				<p class="hero-text">Яхт-клуб «Попутный ветер» — это прекрасный, сплоченный коллектив, который всегда рад гостям и новым членам клуба! Вы готовы раскрыть свой потенциал? Приходите к нам! У нас вы найдёте поддержку и единомышленников. Надеемся, у нас вы отдадите якорь!</p>
+				<p class="end-decor"><img src="img/anchor.svg" width="60" height="60" alt="Якорь"></p>
 			</div>
 		</section>
+		<main class="main-content">
 		<section class="services">
 			<div  class="wrapper">
 				<h2>Услуги</h2>
@@ -115,10 +124,11 @@
 				</ul>
 			</div>
 		</section>
-		<section class="main-banner">
-			<div  class="wrapper main-banner_wrapper">
+		<section class="main-banner decor-back">
+			<div  class="wrapper main-banner__wrapper">
 				<h2>Семинар по метеорологии для яхтсменов!</h2>
 				<p class="main-banner__description">Приглашаем вас принять участие в семинаре по метеорологии! Основные темы: динамика атмосферных процессов, особенности процессов в нижних и верхних слоях атмосферы, основы синоптической метеорологии в яхтинге, принципы образования облаков, основные ветра в яхтинге (особое внимание движению и образованию бризов) и много полезных знаний, которые помогут вам самостоятельно ориентироваться в ветровой ситуации.</p>
+				<p class="end-decor"><img src="img/helm.svg" width="80" height="80" alt="Корабельный штурвал"></p>
 			</div>
 		</section>
 		<section class="rent">
@@ -257,8 +267,8 @@
 			</div>
 		</section>
 		</main>
-		<footer class="wrapper main-footer">
-		  <div class="footer-container">
+		<footer class="main-footer decor-back">
+		  <div class="wrapper footer-container">
 			<div class="footer-column">
 			  <p class="logo">
 				<img src="img/logo.svg" width="100" height="106" alt="Логотип яхт клуба">
@@ -334,7 +344,7 @@
 					<a href="#">Корпоративные регаты</a>
 				  </li>
 				  <li class="footer-navigation-item">
-					<a href="#">Календарь мероприятий</a>
+					<a href="#">Календарь событий</a>
 				  </li>
 				  <li class="footer-navigation-item">
 					<a href="#">Стать участником</a>
