@@ -27,21 +27,22 @@
 					<img src="img/logo.svg" width="64" height="64" alt="Логотип яхт-клуба Попутный ветер">
 				</a>
 				<p class="site-title">Попутный ветер</p>
+				<button class="mobmenu__btn">&#9776;</button>
 				<ul class="site-navigation">
 					<li class="site-navigation__item">
 						<a class="active" href="index.html">Наш клуб</a>
 					</li>
-					<li class="site-navigation__item">
-						<a href="#">Услуги</a>
-							<ul class="site-navigation__submenu">
-								<li>Стоянка</li>
-								<li>Хранение</li>
-								<li>Обучение</li>
-								<li>Аренда</li>
-								<li>Брокераж</li>
-								<li>Сервис</li>
-								<li>Регаты</li>
-								<li>Прогулки</li>
+					<li class="site-navigation__item submenu">
+						<a href="#">Услуги<span class="dropdown-icon"></span></a>
+							<ul class="submenu-list">
+								<li class="submenu-list__item"><a href="#">Стоянка</a></li>
+								<li class="submenu-list__item"><a href="#">Хранение</a></li>
+								<li class="submenu-list__item"><a href="#">Обучение</a></li>
+								<li class="submenu-list__item"><a href="#">Аренда</a></li>
+								<li class="submenu-list__item"><a href="#">Брокераж</a></li>
+								<li class="submenu-list__item"><a href="#">Сервис</a></li>
+								<li class="submenu-list__item"><a href="#">Регаты</a></li>
+								<li class="submenu-list__item"><a href="#">Прогулки</a></li>
 							</ul>
 					</li>
 					<li class="site-navigation__item">
@@ -67,11 +68,9 @@
 					<li class="contacts__list_item"><a class="ml" href="#"><img src="img/mail.svg" alt="E-mail" width="24" height="24"></a></li>
 				</ul>
 			</div>
-			<button class="nav__toggle" aria-expanded="false" type="button">
-				menu
-			</button>
-			<nav class="nav-mobile">
-				<ul class="nav-mobile__wrapper">
+			<!--<nav class="nav-mobile">-->
+				<ul class="mobmenu-list">
+					<li class="nav-mobile__item"><a href="#" class="mobmenu__btn-close">&times;</a></li>
 					<li class="nav-mobile__item"><a href="#">Наш клуб</a></li>
 					<li class="nav-mobile__item"><a href="#">Услуги</a></li>
 					<li class="nav-mobile__item"><a href="#">Команда</a></li>
@@ -79,7 +78,7 @@
 					<li class="nav-mobile__item"><a href="#">Новости</a></li>
 					<li class="nav-mobile__item"><a href="#">Контакты</a></li>
 				</ul>
-			</nav>
+			<!--</nav>-->
 		</header>
 		<section class="hero">
 			<div  class="hero__wrapper">

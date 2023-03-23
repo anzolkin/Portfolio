@@ -1,17 +1,46 @@
-let navToggle = document.querySelector(".nav__toggle");
-let navWrapper = document.querySelector(".nav-mobile__wrapper");
+/* Slider */
+let slideIndex = 1;
+showSlides(slideIndex);
 
-navToggle.addEventListener("click", function () {
-  if (navWrapper.classList.contains("active")) {
-    this.setAttribute("aria-expanded", "false");
-    this.setAttribute("aria-label", "menu");
-    navWrapper.classList.remove("active");
-  } else {
-    navWrapper.classList.add("active");
-    this.setAttribute("aria-label", "close menu");
-    this.setAttribute("aria-expanded", "true");
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("main-slides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-});
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+} 
+/* End slider */
+
+/* Mobile menu */
+let mobMenu = document.querySelector(".mobmenu-list");
+let mobMenuBtn = document.querySelector(".mobmenu__btn");
+let mobMenuBtnClose = document.querySelector(".mobmenu__btn-close");
+
+/* Set the width of the sidebar to 250px (show it) */
+mobMenuBtn.onclick = function () {
+mobMenu.style.width = "300px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+mobMenuBtnClose.onclick = function () {
+  mobMenu.style.width = "0";
+}
+
 /*let darkThemeButton = document.querySelector('.theme-button-dark');
 let lightThemeButton = document.querySelector('.theme-button-light');
 let sansSerifFontButton = document.querySelector('.font-button-sans-serif');
@@ -28,55 +57,4 @@ lightThemeButton.onclick = function () {
 	darkThemeButton.classList.remove('active');
 	lightThemeButton.classList.add('active');
 }
-
-serifFontButton.onclick = function () {
-	document.body.classList.add('serif');
-	serifFontButton.classList.add('active');
-	sansSerifFontButton.classList.remove('active');
-};
-
-sansSerifFontButton.onclick = function () {
-	document.body.classList.remove('serif');
-	serifFontButton.classList.remove('active');
-	sansSerifFontButton.classList.add('active');
-};
-
-let blogArticles = document.querySelectorAll('.blog-article.short');
-
-for (let blogArticle of blogArticles) {
-	let buttonMore = blogArticle.querySelector('.more');
-	buttonMore.onclick = function () {
-		blogArticle.classList.remove('short');
-	};
-};
-
-let cardViewButtonGrid = document.querySelector('.card-view-button-grid');
-let cardViewButtonList = document.querySelector('.card-view-button-list');
-let cardsList = document.querySelector('.cards');
-
-cardViewButtonList.onclick = function () {
-	cardsList.classList.add('list');
-	cardViewButtonGrid.classList.remove('active');
-	cardViewButtonList.classList.add('active');
-}
-
-cardViewButtonGrid.onclick = function () {
-	cardsList.classList.remove('list');
-	cardViewButtonGrid.classList.add('active');
-	cardViewButtonList.classList.remove('active');
-}
-
-let activePhoto = document.querySelector('.active-photo');
-let previews = document.querySelectorAll('.preview-list li a');
-
-//let currentImage = previews[0]
-for (let currentImage of previews){
-	currentImage.onclick = function (evt) {
-		evt.preventDefault();
-		activePhoto.src = currentImage.href;
-
-		let tumbActive = document.querySelector('.preview-list li .active-item');
-		tumbActive.classList.remove('active-item');
-		currentImage.classList.add('active-item');
-	};
 }*/
