@@ -41,20 +41,42 @@ mobMenuBtnClose.onclick = function () {
   mobMenu.style.width = "0";
 }
 
-/*let darkThemeButton = document.querySelector('.theme-button-dark');
-let lightThemeButton = document.querySelector('.theme-button-light');
-let sansSerifFontButton = document.querySelector('.font-button-sans-serif');
-let serifFontButton = document.querySelector('.font-button-serif');
+/* Кнопка наверх*/
+let upButton = document.querySelector('.up-button');
+
+window.onscroll = function () {
+  if (window.pageYOffset > 600) {
+    upButton.classList.add('shown');
+  } else {
+    upButton.classList.remove("shown");
+  }
+
+};
+
+upButton.onclick = function () {
+  window.scrollTo(0, 0);
+};
+
+let darkThemeButton = document.querySelector('.toggle-light-dark');
+let darkAnchor = document.querySelector('.hero__wrapper .end-decor img');
+let darkHelm = document.querySelector('.main-banner__wrapper .end-decor img');
+let darkHeaderLogo = document.querySelector('.header-logo img');
+let darkFooterLogo = document.querySelector('.logo img');
 
 darkThemeButton.onclick = function () {
-	document.body.classList.add('dark');
-	darkThemeButton.classList.add('active');
-	lightThemeButton.classList.remove('active');
+	if (document.body.classList.contains('dark')) {
+		document.body.classList.remove('dark');
+		darkAnchor.src = 'img/anchor.svg';
+		darkHelm.src = 'img/helm.svg';
+		darkHeaderLogo.src = 'img/logo.svg';
+		darkFooterLogo.src = 'img/logo.svg';
+	} else {
+		document.body.classList.add('dark');
+		darkAnchor.src = "img/anchor-dark.svg"
+		darkHelm.src = 'img/helm-dark.svg';
+		darkHeaderLogo.src = 'img/logo-dark.svg';
+		darkFooterLogo.src = 'img/logo-dark.svg';
+	}
+	/*document.body.classList.toggle('dark');
+	darkAnchor.src = "img/anchor-dark.svg";*/
 }
-
-lightThemeButton.onclick = function () {
-	document.body.classList.remove('dark');
-	darkThemeButton.classList.remove('active');
-	lightThemeButton.classList.add('active');
-}
-}*/

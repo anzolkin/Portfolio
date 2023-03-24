@@ -20,7 +20,7 @@
     font-weight: normal;
     font-style: normal;
 }
-html {box-sizing: border-box;}
+html {box-sizing: border-box;scroll-behavior: smooth;}
 *, *:before, *:after {box-sizing: inherit;}
 body {font-family: "open_sans_regular", arial, sans-serif;font-size: 18px;line-height: 1.5;color: #163152;background-color: #fdfdff;padding: 0;margin: 0;}
 section {margin-bottom: 4rem;}
@@ -34,11 +34,11 @@ a {text-decoration: none;color: #222;}
 .decor-back {
 	background-color:#def7ff;
 	background-image:
-	radial-gradient(circle at 100% 150%, #def7ff 24%, white 24%, white 28%, #def7ff 28%, #def7ff 36%, white 36%, white 40%, transparent 40%, transparent),
-	radial-gradient(circle at 0    150%, #def7ff 24%, white 24%, white 28%, #def7ff 28%, #def7ff 36%, white 36%, white 40%, transparent 40%, transparent),
-	radial-gradient(circle at 50%  100%, white 10%, #def7ff 10%, #def7ff 23%, white 23%, white 30%, #def7ff 30%, #def7ff 43%, white 43%, white 50%, #def7ff 50%, #def7ff 63%, white 63%, white 71%, transparent 71%, transparent),
-	radial-gradient(circle at 100% 50%, white 5%, #def7ff 5%, #def7ff 15%, white 15%, white 20%, #def7ff 20%, #def7ff 29%, white 29%, white 34%, #def7ff 34%, #def7ff 44%, white 44%, white 49%, transparent 49%, transparent),
-	radial-gradient(circle at 0    50%, white 5%, #def7ff 5%, #def7ff 15%, white 15%, white 20%, #def7ff 20%, #def7ff 29%, white 29%, white 34%, #def7ff 34%, #def7ff 44%, white 44%, white 49%, transparent 49%, transparent);
+	radial-gradient(circle at 100% 150%, #def7ff 24%, #ffffff 24%, #ffffff 28%, #def7ff 28%, #def7ff 36%, #ffffff 36%, #ffffff 40%, transparent 40%, transparent),
+	radial-gradient(circle at 0 150%, #def7ff 24%, #ffffff 24%, #ffffff 28%, #def7ff 28%, #def7ff 36%, #ffffff 36%, #ffffff 40%, transparent 40%, transparent),
+	radial-gradient(circle at 50% 100%, #ffffff 10%, #def7ff 10%, #def7ff 23%, #ffffff 23%, #ffffff 30%, #def7ff 30%, #def7ff 43%, #ffffff 43%, #ffffff 50%, #def7ff 50%, #def7ff 63%, #ffffff 63%, #ffffff 71%, transparent 71%, transparent),
+	radial-gradient(circle at 100% 50%, #ffffff 5%, #def7ff 5%, #def7ff 15%, #ffffff 15%, #ffffff 20%, #def7ff 20%, #def7ff 29%, #ffffff 29%, #ffffff 34%, #def7ff 34%, #def7ff 44%, #ffffff 44%, #ffffff 49%, transparent 49%, transparent),
+	radial-gradient(circle at 0 50%, #ffffff 5%, #def7ff 5%, #def7ff 15%, #ffffff 15%, #ffffff 20%, #def7ff 20%, #def7ff 29%, #ffffff 29%, #ffffff 34%, #def7ff 34%, #def7ff 44%, #ffffff 44%, #ffffff 49%, transparent 49%, transparent);
 	background-size: 100px 50px;
 }
 .header-nav {
@@ -56,7 +56,6 @@ a {text-decoration: none;color: #222;}
 .site-title {
 	font-family: "open_sans_bold", arial, sans-serif;
 	font-size: 2.5rem;
-	color: #163152;
 	margin-right: auto;
 }
 .site-navigation {
@@ -234,7 +233,6 @@ a {text-decoration: none;color: #222;}
 }
 .card-list__item__description {
 	font-size: 0.89rem;
-	color: #163152;
 	text-align: justify;
 	hyphens: auto;
 	margin-bottom: 1rem;
@@ -302,7 +300,7 @@ a {text-decoration: none;color: #222;}
 	position: absolute;
 	top: 50%;
 	width: auto;
-	color: white;
+	color: #ffffff;
 	font-weight: bold;
 	transition: 0.6s ease;
 	border-radius: 0 3px 3px 0;
@@ -436,7 +434,7 @@ a {text-decoration: none;color: #222;}
 	font-size: 2rem;
 }
 .mobmenu__btn {
-	display: block;
+	display: none;
 	font-size: 1rem;
 	color: #e5e5e5;
 	background-color: #163152;
@@ -449,69 +447,99 @@ a {text-decoration: none;color: #222;}
   background-color: #444;
 }
 
+/* Кнопка наверх */
+.up-button {
+	display: none;
+	position: fixed;
+	bottom: 75px;
+	right: 20px;
+	width: 56px;
+	height: 56px;
+	font-size: 2rem;
+	color: #163152;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	border: 2px solid #163152;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1s;
+	z-index: 1;
+	padding: 0;
+}
+
+.up-button:hover {
+	color: #f7941d;
+	border-color: #f7941d;
+}
+.shown {
+	display: inline-block;
+}
+
 /* Theme: dark */
 
 .page.dark {
-  color: #fdfdff;
-  background-color: #1d1f1f;
+	color: #e5e5e5;
+	background-color: #163152;
+}
+.page.dark .decor-back {
+	background-color:#000000;
+	background-image:
+	radial-gradient(circle at 100% 150%, #000000 24%, #163152 24%, #163152 28%, #000000 28%, #000000 36%, #163152 36%, #163152 40%, transparent 40%, transparent),
+	radial-gradient(circle at 0 150%, #000000 24%, #163152 24%, #163152 28%, #000000 28%, #000000 36%, #163152 36%, #163152 40%, transparent 40%, transparent),
+	radial-gradient(circle at 50% 100%, #163152 10%, #000000 10%, #000000 23%, #163152 23%, #163152 30%, #000000 30%, #000000 43%, #163152 43%, #163152 50%, #000000 50%, #000000 63%, #163152 63%, #163152 71%, transparent 71%, transparent),
+	radial-gradient(circle at 100% 50%, #163152 5%, #000000 5%, #000000 15%, #163152 15%, #163152 20%, #000000 20%, #000000 29%, #163152 29%, #163152 34%, #000000 34%, #000000 44%, #163152 44%, #163152 49%, transparent 49%, transparent),
+	radial-gradient(circle at 0 50%, #163152 5%, #000000 5%, #000000 15%, #163152 15%, #163152 20%, #000000 20%, #000000 29%, #163152 29%, #163152 34%, #000000 34%, #000000 44%, #163152 44%, #163152 49%, transparent 49%, transparent);
+}
+.page.dark .toggle-light-dark {
+	background-image: url("../img/sun-light.svg");
+}
+.page.dark .wa {
+	background-color: #006400;
+}
+.page.dark .tg {
+	background-color: #000080;
+}
+.page.dark .vb {
+	background-color: #4B0082;
+}
+.page.dark .ml {
+	background-color: #BDB76B;
+}
+.page.dark .hero{
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("../img/hero-back.jpg");
+}
+.page.dark .services .card-list__item__more,.page.dark .site-navigation__item a,.page.dark .footer-container a {
+	color: #e5e5e5;
+}
+.page.dark .hero__wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.page.dark .submenu .dropdown-icon {
+  border-top: 5px solid #e5e5e5;
+}
+.page.dark .submenu:hover .dropdown-icon {
+	border-right: 5px solid #e5e5e5;
+}
+.page.dark .submenu .submenu-list{
+	background-color: #163152;
+}
+.page.dark .main-slides img {
+	filter: brightness(60%);
+}
+.page.dark .up-button {
+	color: #e5e5e5;
+	background-color: rgba(22, 49, 82, 0.8);
+	border: 2px solid #e5e5e5;
 }
 
-.page.dark .font-button-sans-serif {
-  color: #fdfdff;
-}
 
-.page.dark .font-button-serif {
-  color: #fdfdff;
-}
-
-.page.dark .theme-button-light {
-  background-image: url("../img/sun-light.svg");
-}
-
-.page.dark .logo img {
-  filter: brightness(20);
-}
-
-.page.dark a {
-  color: #fdfdff;
-}
-
-.page.dark a:hover {
-  opacity: 0.5;
-}
-
-.page.dark a:active {
-  opacity: 0.3;
-}
-
-.page.dark .signin img {
-  filter: brightness(20);
-}
-
-.page.dark .card-view-button-grid {
-  background-image: url("../img/grid-light.svg");
-}
-
-.page.dark .card-view-button-list {
-  background-image: url("../img/list-light.svg");
-}
-
-.page.dark .card {
-  box-shadow: 0 4px 30px #181a1a;
-}
-
-.page.dark .meta time {
-  color: rgba(253, 253, 255, 0.5);
-}
-
-.page.dark .share {
-  filter: brightness(20);
-}
-
-.page.dark .social-item img {
-  filter: brightness(20);
-}
-
-.page.dark .post-share {
-  filter: brightness(20);
+@media (max-width:480px){
+	.mobmenu__btn {
+		display: block;
+	}
+	.site-navigation {
+		display: none;
+	}
 }
