@@ -490,6 +490,9 @@ a {text-decoration: none;color: #222;}
 	radial-gradient(circle at 100% 50%, #163152 5%, #000000 5%, #000000 15%, #163152 15%, #163152 20%, #000000 20%, #000000 29%, #163152 29%, #163152 34%, #000000 34%, #000000 44%, #163152 44%, #163152 49%, transparent 49%, transparent),
 	radial-gradient(circle at 0 50%, #163152 5%, #000000 5%, #000000 15%, #163152 15%, #163152 20%, #000000 20%, #000000 29%, #163152 29%, #163152 34%, #000000 34%, #000000 44%, #163152 44%, #163152 49%, transparent 49%, transparent);
 }
+.page.dark .header-logo svg,.page.dark .logo svg,.page.dark .contacts__list_item svg,.page.dark .end-decor svg {
+	fill: #e5e5e5;
+}
 .page.dark .toggle-light-dark {
 	background-image: url("../img/sun-light.svg");
 }
