@@ -33,11 +33,13 @@ let mobMenuBtnClose = document.querySelector(".mobmenu__btn-close");
 
 /* Set the width of the sidebar to 250px (show it) */
 mobMenuBtn.onclick = function () {
-mobMenu.style.width = "300px";
+mobMenu.style.width = "100%";
+mobMenu.style.maxWidth = "576px";
 }
 
 /* Set the width of the sidebar to 0 (hide it) */
-mobMenuBtnClose.onclick = function () {
+mobMenuBtnClose.onclick = function (e) {
+  e.preventDefault();
   mobMenu.style.width = "0";
 }
 
@@ -58,16 +60,7 @@ upButton.onclick = function () {
 };
 
 let darkThemeButton = document.querySelector('.toggle-light-dark');
-let darkAnchor = document.querySelector('.hero__wrapper .end-decor img');
 
 darkThemeButton.onclick = function () {
-	if (document.body.classList.contains('dark')) {
-		document.body.classList.remove('dark');
-		darkAnchor.src = 'img/anchor.svg';
-	} else {
-		document.body.classList.add('dark');
-		darkAnchor.src = "img/anchor-dark.svg"
-	}
-	/*document.body.classList.toggle('dark');
-	darkAnchor.src = "img/anchor-dark.svg";*/
+	document.body.classList.toggle('dark');
 }
