@@ -180,13 +180,17 @@ a {text-decoration: none;color: #222;}
 }
 .hero__wrapper{
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 60%;
+	width: 60%;
 	text-align: center;
 	border-radius: 1rem;
 	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-	transform: translate(-50%, -50%);
 	padding: 3rem;
+	margin: auto;
 }
 .hero h1 {
 	font-style: italic;
@@ -539,8 +543,56 @@ a {text-decoration: none;color: #222;}
 	border: 2px solid #e5e5e5;
 }
 @media (min-width:1200px) and (max-width:1399px){}
-@media (min-width:1025px) and (max-width:1199px){}
 /***************************************************************************************/
+@media (min-width:1025px) and (max-width:1199px){
+	.header-logo {
+		margin-right: 1rem;
+	}
+	.site-title {
+		font-size: 2.2rem;
+		margin-bottom: 0.5rem;
+	}
+	.site-navigation {
+		width: 530px;
+		margin-right: 1rem;
+	}
+	.hero {
+		height: 75vh;
+	}
+	.hero__wrapper{
+		height: 65%;
+		width: 80%;
+		padding: 1rem 2rem;
+	}
+	.card-list {
+		justify-content: center;
+	}
+	.card-list__item {
+		min-width: 31%;
+	}
+	.main-footer {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		margin-top: 2rem;
+	}
+	.footer-column {
+		margin-top: 0;
+		margin-left: 0;
+	}
+	.main-footer .logo {
+		margin-right: 1rem;
+	}
+	.footer-column svg {
+		width: 48px;
+		height: 48px;
+	}
+	.main-footer .site-title {
+		font-size: 2rem;
+	}
+	.footer-navigation-topics {
+		max-width: 600px;
+	}
+}
 @media (min-width:992px) and (max-width:1024px){
 	.header-logo {
 		margin-right: 1rem;
@@ -557,9 +609,8 @@ a {text-decoration: none;color: #222;}
 		height: 75vh;
 	}
 	.hero__wrapper{
-		top: 50%;
-		left: 40%;
-		transform: translate(-30%, -50%);
+		height: 72%;
+		width: 80%;
 		padding: 1rem 2rem;
 	}
 	.card-list {
@@ -629,12 +680,11 @@ a {text-decoration: none;color: #222;}
 		margin-bottom: 1.25rem;
 	}
 	.hero {
-		height: 100vh;
+		height: 87vh;
 	}
 	.hero__wrapper{
-		top: 11%;
-		left: 17%;
-		transform: translate(-10%, -10%);
+		height: 70%;
+		width: 90%;
 		padding: 1rem;
 	}
 	.hero h1 {
@@ -718,12 +768,11 @@ a {text-decoration: none;color: #222;}
 		height: 22px;
 	}
 	.hero {
-		height: 98vh;
+		height: 95vh;
 	}
 	.hero__wrapper{
-		top: 13%;
-		left: 9%;
-		transform: translate(-5%, -10%);
+		height: 95%;
+		width: 95%;
 		padding: 1rem;
 	}
 	.hero h1 {
@@ -826,8 +875,9 @@ a {text-decoration: none;color: #222;}
 	}
 	.hero__wrapper{
 		position: static;
+		height: 100%;
+		width: 100%;
 		border-radius: 0;
-		transform: translate(0, 0);
 		padding: 1rem;
 	}
 	.hero h1 {
@@ -940,8 +990,9 @@ a {text-decoration: none;color: #222;}
 	}
 	.hero__wrapper{
 		position: static;
+		height: 100%;
+		width: 100%;
 		border-radius: 0;
-		transform: translate(0, 0);
 		padding: 1rem;
 	}
 	.hero h1 {
