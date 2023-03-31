@@ -173,19 +173,17 @@ a {text-decoration: none;color: #222;}
 .hero {
 	position: relative;
 	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-image: url("../img/hero-back.webp");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .hero__wrapper{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 60%;
-	width: 60%;
+	position: relative;
+	width: 50%;
 	text-align: center;
 	border-radius: 1rem;
 	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
@@ -542,7 +540,7 @@ a {text-decoration: none;color: #222;}
 	background-color: rgba(22, 49, 82, 0.8);
 	border: 2px solid #e5e5e5;
 }
-@media (min-width:1200px) and (max-width:1399px){}
+@media (min-width:1200px) and (max-width:1365px){}
 /***************************************************************************************/
 @media (min-width:1025px) and (max-width:1199px){
 	.header-logo {
@@ -557,11 +555,10 @@ a {text-decoration: none;color: #222;}
 		margin-right: 1rem;
 	}
 	.hero {
-		height: 75vh;
+		height: 85vh;
 	}
 	.hero__wrapper{
-		height: 65%;
-		width: 80%;
+		width: 70%;
 		padding: 1rem 2rem;
 	}
 	.card-list {
@@ -606,11 +603,10 @@ a {text-decoration: none;color: #222;}
 		margin-right: 1rem;
 	}
 	.hero {
-		height: 75vh;
+		height: 80vh;
 	}
 	.hero__wrapper{
-		height: 72%;
-		width: 80%;
+		width: 70%;
 		padding: 1rem 2rem;
 	}
 	.card-list {
@@ -680,11 +676,13 @@ a {text-decoration: none;color: #222;}
 		margin-bottom: 1.25rem;
 	}
 	.hero {
-		height: 87vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80vh;
 	}
 	.hero__wrapper{
-		height: 70%;
-		width: 90%;
+		width: 95%;
 		padding: 1rem;
 	}
 	.hero h1 {
@@ -771,7 +769,6 @@ a {text-decoration: none;color: #222;}
 		height: 95vh;
 	}
 	.hero__wrapper{
-		height: 95%;
 		width: 95%;
 		padding: 1rem;
 	}
@@ -870,18 +867,14 @@ a {text-decoration: none;color: #222;}
 		height: 20px;
 	}
 	.hero {
-		position: static;
-		height: auto;
+		height: 100vh;
 	}
 	.hero__wrapper{
-		position: static;
-		height: 100%;
-		width: 100%;
-		border-radius: 0;
+		width: 95%;
 		padding: 1rem;
 	}
 	.hero h1 {
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 	.card-list {
 		justify-content: center;
@@ -898,14 +891,17 @@ a {text-decoration: none;color: #222;}
 	}
 	.main-banner h2 {
 		margin-bottom: 0.7rem;
-}
+	}
 	.main-banner__description{
 		font-size: 1rem;
 		line-height: 1.5;
 	}
+	.end-decor {
+		margin-top: 0.5rem;
+	}
 	.end-decor svg {
-		height: 60px;
-		width: 60px;
+		height: 40px;
+		width: 40px;
 	}
 	.up-button {
 		bottom: 1rem;
@@ -943,8 +939,21 @@ a {text-decoration: none;color: #222;}
 	}
 	
 }
+@media (orientation: landscape) and (min-height: 481px) and (max-height: 600px) {
+	.hero {display: flex; justify-content: center; align-items: center; height: 105vh;}
+	.hero h1 {margin-bottom: 0.5rem;}
+	.end-decor svg {height: 40px;width: 40px;}
+}
+@media (orientation: landscape) and (min-height: 320px) and (max-height: 480px) {
+	body {font-size: 16px;}
+	.hero {height: 130vh;}
+	.hero__wrapper {width: 95%;}
+	.hero h1 {font-size: 1.2rem;margin-bottom: 0.5rem;}
+	.end-decor svg {height: 40px;width: 40px;}
+}
+
 @media (max-width:480px){
-	body {sans-serif;font-size: 16px;}
+	body {font-size: 16px;}
 	section {margin-bottom: 1rem;}
 	h1 {font-size: 1.2rem;}
 	h2 {font-size: 1.4rem;}
