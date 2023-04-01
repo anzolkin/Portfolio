@@ -540,8 +540,21 @@ a {text-decoration: none;color: #222;}
 	background-color: rgba(22, 49, 82, 0.8);
 	border: 2px solid #e5e5e5;
 }
-@media (min-width:1200px) and (max-width:1365px){}
-/***************************************************************************************/
+@media (min-width:1200px) and (max-width:1365px){
+	.hero {
+		height: 90vh;
+	}
+	.hero__wrapper{
+		width: 70%;
+		padding: 1rem 2rem;
+	}
+	.card-list {
+		gap: 0.5rem;
+	}
+	.card-list__item {
+		min-width: 15%;
+	}
+}
 @media (min-width:1025px) and (max-width:1199px){
 	.header-logo {
 		margin-right: 1rem;
