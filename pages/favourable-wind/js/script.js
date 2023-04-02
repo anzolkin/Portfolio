@@ -1,4 +1,7 @@
 /* Slider */
+let prevArrow = document.querySelector(".prev");
+let nextArrow = document.querySelector(".next");
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -23,7 +26,16 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-} 
+}
+
+prevArrow.onclick = function (e) {
+	e.preventDefault();
+	showSlides(slideIndex += -1);
+};
+nextArrow.onclick = function (e) {
+	e.preventDefault();
+	showSlides(slideIndex += 1);
+}; 
 /* End slider */
 
 /* Mobile menu */
