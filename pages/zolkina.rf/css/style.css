@@ -1,0 +1,213 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------------------------------------------------------------*/
+:root {
+	--color-primary: #696969;
+	--color-secondary: #fdfdff;
+	--bg-primary: #fdfdff;
+	--bg-secondary: #fe62ab;
+	--unit: 4rem;
+}
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.67;
+	font-weight: 400;
+	color: var(--color-primary);
+	background-color: var(--bg-primary);
+}
+h1, h2, h3, h4 {
+	font-family: "Lobster", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgba(34,158,178,.9);/**/
+}
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.75;
+}
+h3 {
+  font-size: 1.313rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+section {
+	margin-bottom: var(--unit);
+}
+p{
+	text-align:justify;
+	hyphens: auto;
+	margin-bottom: .5rem;
+}
+small {
+	font-size: 0.8rem;
+}
+.wrapper {
+	max-width: 1366px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.site-header {
+	background: var(--bg-secondary);
+	padding-top: 0.5rem;
+}
+.header-top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.header-logo img{
+	width: 120px;
+	height: 120px;
+	margin: 0;
+}
+.site-title {
+	color: var(--color-secondary);
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 2px var(--color-primary);
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 2rem;
+}
+.mobmenu__btn {
+	display: none;
+}
+.toggle-light-dark {
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-image: url("../img/moon.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--color-secondary);
+	border-radius: 50%;
+	cursor: pointer;
+	margin-bottom: 2rem;
+}
+.toggle-light-dark:hover {
+	opacity: 0.5;
+}
+.header-nav {
+	display: flex;
+	flex-wrap: wrap;
+}
+.site-navigation {
+	display: flex;
+	justify-content: space-between;
+	width: 600px;
+	margin-top: -2rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+.site-navigation__item {
+	font-size: 1rem;
+}
+.site-navigation__item a {
+	color: var(--color-secondary);
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+.site-navigation__item a:hover {
+  color: #f7941d;
+}
+.site-navigation__item a:active {
+  color: #f7941d;
+}
+.site-navigation__item .active {
+	color: #f7941d;
+}
+.site-navigation__item .active:hover {
+	opacity: 0.5;
+}
+.section-title {
+	text-align: center;
+	color: var(--color-secondary);
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 2px var(--color-primary);
+	background: var(--bg-secondary);
+	margin-bottom: var(--unit);
+}
+.news {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style: none;
+}
+.news__item {
+	width: 432px;
+	padding: 1rem;
+}
+.news__item img{
+	width: 100%;
+	height: auto;
+}
+.site-footer {
+	background-color: var(--bg-secondary);
+}
+.copyright {
+	line-height: 1;
+	color: var(--color-secondary);
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.copyright a {
+	color: var(--color-secondary);
+}
