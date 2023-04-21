@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Лояльность</title>
+		<meta http-equiv= "X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Диаграмма лояльности">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="loyalty">
+				<svg xmlns="http://www.w3.org/2000/svg" width="65" height="45" viewBox="0 0 10 12" fill="#cccccc" stroke="none">
+				  <g transform="translate(-125.61635,-132.50946)">
+					<g transform="matrix(0.35277777,0,0,-0.35277777,-41.706995,347.92403)">
+						<g transform="translate(475.4107,610.6243)">
+							<path d="m 0,0 c -1.082,0 -1.959,-0.877 -1.959,-1.959 0,-0.277 0.059,-0.54 0.163,-0.778 0.179,-0.408 0.463,-1.249 0.463,-1.985 v -28.891 c 0,-0.736 0.596,-1.336 1.333,-1.336 0.736,0 1.336,0.6 1.336,1.336 v 28.891 c 0,0.736 0.283,1.577 0.459,1.985 0.105,0.238 0.163,0.501 0.163,0.778 C 1.961,-0.88 1.082,0 0,0"/>
+						</g>
+						<g transform="translate(497.1518,596.9736)">
+							<path d="M 0,0 C -0.27,-0.368 -0.267,-0.863 0.008,-1.198 1.473,-2.974 2.981,-4.431 4.405,-5.593 5.66,-6.618 4.024,-7.365 3.657,-7.521 c -7.47,-3.191 -14.934,3.485 -22.399,1.452 V 9.691 C -11.265,11.725 -3.789,5.02 3.688,8.252 4.053,8.408 4.386,8.37 4.547,8.124 4.707,7.88 4.667,7.46 4.444,7.049 2.963,4.333 1.481,2.031 0,0" />
+						</g>
+					</g>
+				  </g>
+				</svg>
+			</div>
+			<div class="chart">
+				<div class="chart-legend">
+					<div class="chart-legend-sum">72</div>
+					<div class="chart-legend-frac">
+						<div class="frac-number">.7</div>
+						<div class="frac-percent">&nbsp;%</div>
+					</div>
+					<div class="chart-legend-title">Лояльность</div>
+					<div class="chart-legend-concl">ниже среднего</div>
+					<div class="chart-legend-descr">по отрасли FMCG<br> значений слева от медианы<br> 52.0% &dash; 83.1%</div>
+					<div class="chart-legend-odds">3.1</div>
+				</div>
+				<svg class="arcs" width="230" height="230" viewBox="-1 1 230 230" xmlns="http://www.w3.org/2000/svg">
+					<circle class="arc-rim" r="109" cx="112" cy="112"></circle>
+					<circle class="arc-promoters" r="109" cx="112" cy="112"></circle>
+					<circle class="arc-skeptics" r="109" cx="112" cy="112"></circle>
+					<circle class="arc-critics" r="109" cx="112" cy="112"></circle>
+				</svg>
+			</div>
+			<div class="substrate">
+				<div class="substrate-top"></div>
+				<div class="plus">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" stroke="#d2d2d2" stroke-width="2">
+					  <line x1="2" y1="10" x2="14" y2="10" />
+					  <line x1="8" y1="4" x2="8" y2="16" />
+					</svg>
+				</div>
+			</div>
+			<ul class="result">
+				<li class="result__item promoters">
+					<ul class="result-category">
+						<li class="result-category-name">
+							Промоутеры
+						</li>
+						<li class="result-category-score">
+							<div class="result-category-pct">32.0%</div>
+							<div class="result-category-abs">81</div>
+						</li>
+						<li class="result-category-figure">
+							<span class="category-figure-value">+1.2%</span>
+							<svg class="category-figure-pct" xmlns="http://www.w3.org/2000/svg" height="26">
+								<rect width="30" height="26" />
+							</svg>
+							<svg class="category-figure-abs" xmlns="http://www.w3.org/2000/svg" height="8">
+								<rect width="30" height="8" />
+							</svg>
+						</li>
+					</ul>
+				</li>
+				<li class="result__item skeptics">
+					<ul class="result-category">
+						<li class="result-category-name">
+							Скептики
+						</li>
+						<li class="result-category-score">
+							<div class="result-category-pct">39.1%</div>
+							<div class="result-category-abs">8</div>
+						</li>
+						<li class="result-category-figure">
+							<span class="category-figure-value">+4.8%</span>
+								<svg class="category-figure-pct" xmlns="http://www.w3.org/2000/svg" height="26">
+									<rect width="30" height="26" />
+								</svg>
+								<svg class="category-figure-abs" xmlns="http://www.w3.org/2000/svg" height="8">
+									<rect width="30" height="8" />
+								</svg>
+						</li>
+					</ul>
+				</li>
+				<li class="result__item critics">
+					<ul class="result-category">
+						<li class="result-category-name">
+							Критики
+						</li>
+						<li class="result-category-score">
+							<div class="result-category-pct">79.8%</div>
+							<div class="result-category-abs">7</div>
+						</li>
+						<li class="result-category-figure">
+							<span class="category-figure-value">-9.7%</span>
+							<svg class="category-figure-pct" xmlns="http://www.w3.org/2000/svg" height="26">
+								<rect width="30" height="26" />
+							</svg>
+							<svg class="category-figure-abs" xmlns="http://www.w3.org/2000/svg" height="8">
+								<rect width="30" height="8" />
+							</svg>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
